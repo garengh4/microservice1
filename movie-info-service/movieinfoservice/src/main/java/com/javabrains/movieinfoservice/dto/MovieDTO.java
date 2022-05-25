@@ -1,31 +1,10 @@
-package com.javabrains.movieinfoservice.models;
+package com.javabrains.movieinfoservice.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "movie_info")
-public class Movie {
-  
-  @Id
-  @Column(name = "movie_id")
-  @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class MovieDTO {
   private Integer movieId;
-
-  @Column(name = "movie_title")
   private String movieTitle;
-
-  @Column(name = "release_year")
   private String releaseYear;
-
-  @Column(name = "directed_by")
   private String directedBy;
-
-  @Column(name = "movie_description")
   private String movieDescription;
 
   public Integer getMovieId() {
@@ -67,5 +46,5 @@ public class Movie {
   public void setMovieDescription(String movieDescription) {
     this.movieDescription = movieDescription;
   }
-  
+
 }

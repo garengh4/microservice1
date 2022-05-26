@@ -3,6 +3,7 @@ package com.javabrains.moviecatalogservice.models;
 import java.util.List;
 
 // TODO: how to combine User and UserRating?
+// there is also a lot of redundancy: userId is everywhere?
 public class User {
 
   private Integer userId;

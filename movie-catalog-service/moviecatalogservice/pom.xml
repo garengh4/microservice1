@@ -20,6 +20,7 @@
   </properties>
   <dependencies>
 
+    <!-- for microservice -->
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

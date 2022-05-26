@@ -1,15 +1,12 @@
 package com.javabrains.moviecatalogservice.models;
 
-public class CatalogItem {
+public class MovieInfo {
 
-  // =======================================================================================================================
   private Integer movieId;
   private String movieTitle;
   private String releaseYear;
   private String directedBy;
   private String movieDescription;
-
-  // =======================================================================================================================
   private Integer userId;
   private String rating;
 
@@ -69,5 +66,4 @@ public class CatalogItem {
     this.rating = rating;
   }
 
-  
 }

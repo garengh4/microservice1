@@ -1,17 +1,33 @@
 package com.javabrains.moviecatalogservice.models;
 
-import java.util.List;
-
 public class UserRating {
-  private List<Rating> userRatings;
 
-  public List<Rating> getUserRatings() {
-    return userRatings;
+  private String movieId;
+  private Integer userId;
+  private String rating;
+
+  public String getMovieId() {
+    return movieId;
   }
 
-  public void setUserRatings(List<Rating> userRatings) {
-    this.userRatings = userRatings;
+  public void setMovieId(String movieId) {
+    this.movieId = movieId;
   }
 
-  
+  public Integer getUserId() {
+    return userId;
+  }
+
+  public void setUserId(Integer userId) {
+    this.userId = userId;
+  }
+
+  public String getRating() {
+    return rating;
+  }
+
+  public void setRating(String rating) {
+    this.rating = rating;
+  }
+
 }

@@ -7,7 +7,7 @@ import com.javabrains.movieratingservice.dto.MovieDTO;
 import com.javabrains.movieratingservice.dto.UserDTO;
 import com.javabrains.movieratingservice.exception.MovieException;
 import com.javabrains.movieratingservice.exception.UserException;
-import com.javabrains.movieratingservice.models.Movie;
+import com.javabrains.movieratingservice.models.Rating;
 import com.javabrains.movieratingservice.models.User;
 import com.javabrains.movieratingservice.repository.MovieRepository;
 import com.javabrains.movieratingservice.repository.UserRepository;
@@ -38,11 +38,10 @@ public class MovieRatingServiceImpl implements MovieRatingService {
     User user = userRepository.findById(userId)
         .orElseThrow(() -> new UserException("No user found with that userId."));
 
-    List<Movie> movies = user.getUserRatedMovies();
-    for(Movie current: movies) {
+    List<Rating> movies = user.getUserRatedMovies();
+    for(Rating current: movies) {
       MovieDTO dto = new MovieDTO();
       dto.setMovieId(current.getMovieId());
-      dto.setMovieTitle(current.getMovieTitle());
       dto.setRating(current.getRating());
       result.add(dto);
     }
@@ -55,12 +54,11 @@ public class MovieRatingServiceImpl implements MovieRatingService {
 
   @Override
   public MovieDTO getRatingForMovie(Integer movieId) throws MovieException {
-    Movie movie = movieRepository.findById(movieId)
+    Rating movie = movieRepository.findById(movieId)
         .orElseThrow(() -> new MovieException("No movie found with that movieId."));
 
     MovieDTO movieDTO = new MovieDTO();
     movieDTO.setMovieId(movie.getMovieId());
-    movieDTO.setMovieTitle(movie.getMovieTitle());
     movieDTO.setRating(movie.getRating());
     return movieDTO;
   }

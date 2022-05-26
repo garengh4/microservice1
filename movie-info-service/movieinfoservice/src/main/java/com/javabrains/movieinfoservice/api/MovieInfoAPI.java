@@ -2,7 +2,7 @@ package com.javabrains.movieinfoservice.api;
 
 import com.javabrains.movieinfoservice.dto.MovieDTO;
 import com.javabrains.movieinfoservice.exception.MovieException;
-import com.javabrains.movieinfoservice.models.Movie;
+import com.javabrains.movieinfoservice.models.MovieInfo;
 import com.javabrains.movieinfoservice.service.MovieService;
 
 import org.springframework.beans.factory.annotation.Autowired;

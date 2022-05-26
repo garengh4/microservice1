@@ -9,15 +9,15 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "movie_rating")
-public class Movie {
+public class Rating {
 
   @Id
   @Column(name = "movie_id")
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Integer movieId;
 
-  @Column(name = "movie_title")
-  private String movieTitle;
+  // @Column(name = "movie_title")
+  // private String movieTitle;
 
   @Column(name = "user_id")
   private Integer userId;
@@ -33,13 +33,13 @@ public class Movie {
     this.movieId = movieId;
   }
 
-  public String getMovieTitle() {
-    return movieTitle;
-  }
+  // public String getMovieTitle() {
+  //   return movieTitle;
+  // }
 
-  public void setMovieTitle(String movieTitle) {
-    this.movieTitle = movieTitle;
-  }
+  // public void setMovieTitle(String movieTitle) {
+  //   this.movieTitle = movieTitle;
+  // }
 
   public String getRating() {
     return rating;

@@ -23,7 +23,7 @@ public class User {
 
   @OneToMany(cascade = CascadeType.ALL)
   @JoinColumn(name = "user_id" )
-  private List<Rating> userRatedMovies;
+  private List<MovieRating> userRatedMovies;
 
   public Integer getUserId() {
     return userId;
@@ -33,11 +33,11 @@ public class User {
     this.userId = userId;
   }
 
-  public List<Rating> getUserRatedMovies() {
+  public List<MovieRating> getUserRatedMovies() {
     return userRatedMovies;
   }
 
-  public void setUserRatedMovies(List<Rating> userRatedMovies) {
+  public void setUserRatedMovies(List<MovieRating> userRatedMovies) {
     this.userRatedMovies = userRatedMovies;
   }
 
